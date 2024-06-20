@@ -1,0 +1,16 @@
+{
+    "code": "bug",
+    "class": "bug",
+    "entityclass": "bug",
+    "creativeinventory": { "general": [ "*" ] },
+    "drawtype": "Cube",
+     "texture": {
+		"base": "game:block/clay/shingles/fire"
+	},
+    "variantgroups": [
+        {
+            "code": "cover",
+            "states": [ "free", "snow" ]
+        }
+    ]
+  }
