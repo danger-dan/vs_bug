@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using Vintagestory.API.Client;
 using Vintagestory.API.Common;
@@ -36,10 +37,13 @@ namespace bug.src
      public override void PerformSnowLevelUpdate(IBulkBlockAccessor blockAccessor, BlockPos pos, Block newBlock, float snowLevel)
         {
             base.PerformSnowLevelUpdate(blockAccessor, pos, newBlock, snowLevel);
-            Console.WriteLine("SNow update");
+        }
+    
+
+        public void ForceExchangeBlock(int id, BlockPos pos)
+        {
+            api.World.BlockAccessor.ExchangeBlock(id, pos);
         }
 
     }
-
-
 }
